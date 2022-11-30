@@ -10,7 +10,11 @@ export default defineConfig({
     port: 8080,
     open: true,
   },
-  plugins: [react()],
+  plugins: [
+    react({
+      jsxImportSource: '@emotion/react',
+    }),
+  ],
   test: {
     globals: true,
     environment: 'jsdom',
